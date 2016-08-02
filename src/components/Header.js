@@ -1,39 +1,36 @@
-import React from 'react';
-import IconButton from 'material-ui/IconButton';
-import MenuButton from 'material-ui/svg-icons/navigation/menu';
+import React, { Component } from 'react';
+import Auto from './Auto';
+import Hamburger from './Hamburger.js'
 
-import Search from './Search';
-import NavBar from './NavBar';
-
-class Header extends React.Component {
-  handelOpen(){
-    this.refs.navbar.handleToggle();
-  }
-  render () {
-    let styles={
-      root:{
-        backgroundColor:'#00BCD4',
+class Header extends Component {
+  getStyles(){
+    return{
+      big:{
+        width:'100%',
+        height:300,
+        backgroundColor:'#00bcd4'
       },
-      icon:{
-        marginTop:'10px',
-        marginLeft:'10px',
-        width: '52px',
-        height: '52px',
-      },
-      svg: {
-        width: '32px',
-        height: '32px',
+      h1:{
+        margin:0,
+        color:'#fff',
+        fontSize:100,
+        position:'absolute',
+        top:70,
+        left:'45%'
       }
-    }
-    return(
-      <div style={styles.root}>
-        <IconButton tooltip="menu" style={styles.icon} iconStyle={styles.svg} onClick={this.handelOpen.bind(this)}>
-          <MenuButton  color='#fff' hoverColor='#004D40'/>
-        </IconButton>
-        <Search />
-        <NavBar ref='navbar'/>
+
+      }
+}
+  render(){
+    const styles=this.getStyles();
+    return (
+      <div style={styles.big}>
+        <Hamburger />
+        <h1 style={styles.h1}>ALL</h1>
+        <Auto handelSearch={this.props.change}/>
       </div>
-    )
+
+    );
   }
 }
 

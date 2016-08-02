@@ -1,28 +1,34 @@
-import React from 'react'
-
-import Me from '../images/aboutme.jpg';
-
-class Footer extends React.Component {
-  render () {
-    let styles={
-      root:{
-        textAlign:'center',
-        color:'#fff',
+import React, { Component } from 'react';
+import pgypic from './images/pgy.jpg'
+class Footer extends Component {
+  getStyles(){
+    return{
+      big:{
+        width:'100%',
+        height:300,
         backgroundColor:'#212121',
-        padding:'30px 10px'
+
       },
-      img:{
+      psty:{
+        color:'#fff',
+        fontSize:"20px",
+        textAlign:'center'
+      },
+      pgy:{
         width:'40%',
-        marginTop:'20px',
+        marginLeft:'40%',
         maxWidth:'200px'
       }
-    }
-    return(
-      <div style={styles.root}>
-        <p>更多信息，请添加我的微信</p>
-        <img src={Me}  style={styles.img}/>
+      }
+  }
+  render(){
+      const styles=this.getStyles();
+    return (
+      <div style={styles.big}>
+        <p style={styles.psty}>更多内容和评论,欢迎添加 happysong 的微信: s594475</p>
+        <img style={styles.pgy} src={pgypic} />
       </div>
-    )
+    );
   }
 }
 
