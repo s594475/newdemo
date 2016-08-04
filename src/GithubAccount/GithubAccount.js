@@ -4,13 +4,14 @@ import isEmpty from 'lodash/isEmpty';
 import UserInfo from './UserInfo';
 import Repos from './Repos';
 import github from './github';
-
+import CircularProgress from 'material-ui/CircularProgress';
 
 class GithubAccount extends Component {
   constructor(props) {
     super(props);
     this.state = {
       user: {},
+      wait:true
     };
   }
   componentDidMount() {
@@ -18,13 +19,14 @@ class GithubAccount extends Component {
       .then((data) => {
         this.setState({
           user: data.user,
-          repos: data.repos
+          repos: data.repos,
+          wait:false
         });
       });
   }
   render(){
     let GitHubInfo;
-
+     let x = <CircularProgress size={5} style={{marginLeft:'50%'}}/>;
     if(!isEmpty(this.state.user)) {
       GitHubInfo = (
         <div>
@@ -35,9 +37,11 @@ class GithubAccount extends Component {
     }
     return(
       <div className='account'>
+        {this.state.wait ? x :
         <Card className="content">
           { GitHubInfo }
         </Card>
+      }
       </div>
     )
   }

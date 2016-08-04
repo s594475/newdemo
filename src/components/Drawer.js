@@ -40,13 +40,9 @@ export default class DrawerUndockedExample extends React.Component {
         >
         <p style={styles.title}>好多视频网</p>
         <div style={styles.menu}>
-          <MenuItem onTouchTap={this.handleClose.bind(this)}>登录列表</MenuItem>
-          <MenuItem onTouchTap={this.handleClose.bind(this)}>登陆</MenuItem>
-            <MenuItem onTouchTap={this.handleClose.bind(this)}>注册</MenuItem>
-              <MenuItem onTouchTap={this.handleClose.bind(this)}>登陆</MenuItem>
-                <MenuItem onTouchTap={this.handleClose.bind(this)}>注册</MenuItem>
-                  <MenuItem onTouchTap={this.handleClose.bind(this)}>登陆</MenuItem>
-                    <MenuItem onTouchTap={this.handleClose.bind(this)}>注册</MenuItem>
+          <MenuItem onTouchTap={this.handleClose.bind(this)}>首页</MenuItem>
+          <MenuItem onTouchTap={this.handleClose.bind(this)}>日志</MenuItem>
+          <MenuItem onTouchTap={this.handleClose.bind(this)}>信息</MenuItem>  
           </div>
         </Drawer>
       </div>
