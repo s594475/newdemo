@@ -1,22 +1,19 @@
 import React, { Component } from 'react';
-import Auto from './Auto';
 
-
-class Header extends Component {
+class Myxin extends Component {
   getStyles(){
     return{
       big:{
         width:'100%',
-        height:300,
+        height:200,
         backgroundColor:'#00bcd4'
       },
       h1:{
         margin:0,
         color:'#fff',
         fontSize:100,
-        position:'absolute',
-    
-        left:'45%'
+      
+        textAlign:'center'
       }
 
       }
@@ -25,12 +22,11 @@ class Header extends Component {
     const styles=this.getStyles();
     return (
       <div style={styles.big}>
-        <h1 style={styles.h1}>ALL</h1>
-        <Auto handelSearch={this.props.change}/>
+        <h1 style={styles.h1}>My github</h1>
       </div>
 
     );
   }
 }
 
-export default Header;
+export default Myxin;

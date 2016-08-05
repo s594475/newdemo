@@ -2,7 +2,7 @@ import React from 'react';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton';
-
+import { Link } from 'react-router';
 export default class DrawerUndockedExample extends React.Component {
 
   constructor(props) {
@@ -39,11 +39,17 @@ export default class DrawerUndockedExample extends React.Component {
           onRequestChange={(open) => this.setState({open})}
         >
         <p style={styles.title}>好多视频网</p>
-        <div style={styles.menu}>
-          <MenuItem onTouchTap={this.handleClose.bind(this)}>首页</MenuItem>
-          <MenuItem onTouchTap={this.handleClose.bind(this)}>日志</MenuItem>
-          <MenuItem onTouchTap={this.handleClose.bind(this)}>信息</MenuItem>  
-          </div>
+          <div style={styles.menu}>
+            <MenuItem onTouchTap={this.handleClose.bind(this)}>
+                <Link to="/" style={styles.link} activeStyle={{color:'red'}} onlyActiveOnIndex={true}>首页</Link>
+            </MenuItem>
+            <MenuItem onTouchTap={this.handleClose.bind(this)}>
+                <Link to="blog" style={styles.link} activeStyle={{color:'red'}}>博客</Link>
+            </MenuItem>
+            <MenuItem onTouchTap={this.handleClose.bind(this)}>
+                <Link to="about" style={styles.link} activeStyle={{color:'red'}}>关于</Link>
+            </MenuItem>
+            </div>
         </Drawer>
       </div>
     );

@@ -26,7 +26,7 @@ class GithubAccount extends Component {
   }
   render(){
     let GitHubInfo;
-     let x = <CircularProgress size={5} style={{marginLeft:'50%'}}/>;
+     let x = <CircularProgress size={1} style={{marginLeft:'50%'}}/>;
     if(!isEmpty(this.state.user)) {
       GitHubInfo = (
         <div>

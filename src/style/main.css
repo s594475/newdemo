@@ -24,6 +24,7 @@ ul {
   overflow-y: scroll;
   padding-left: 16px;
   padding-right: 16px;
+  background-color: #cccccc;
 }
 .account .content {
   max-width: 700px;

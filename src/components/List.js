@@ -7,7 +7,7 @@ class List extends Component {
       big:{
         width:'100%',
         backgroundColor:'#fff',
-        marginTop:'50px'
+        marginTop:'50px',
       }
       }
   }
@@ -16,7 +16,7 @@ class List extends Component {
     return (
 
       <div style={styles.big}>
-    
+
         <Cards style={styles.card} searchVal={this.props.searchone} />
       </div>
     );

@@ -20,14 +20,18 @@ class Hamburger extends Component{
       svg: {
         width: '32px',
         height: '32px',
+      },
+      div:{
+        position:'absolute',
+
       }
     }
     return(
-    <div>
-    <IconButton tooltip="点我~~~" style={styles.icon} iconStyle={styles.svg} onClick={this.handelOpen.bind(this)}>
-      <MenuButton  color='#fff' hoverColor='#004D40'/>
-    </IconButton>
-    <Drawer ref='navbar'/>
+    <div style={styles.div}>
+      <IconButton tooltip="点我~~~" style={styles.icon} iconStyle={styles.svg} onClick={this.handelOpen.bind(this)}>
+        <MenuButton  color='#fff' hoverColor='#004D40'/>
+      </IconButton>
+      <Drawer ref='navbar'/>
     </div>
   );
   }

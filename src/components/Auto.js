@@ -16,12 +16,13 @@ import Searchico from 'material-ui/svg-icons/action/search';
         color:'#fff',
       },
       searcha:{
-        marginTop:'150px',
+
         textAlign:'center',
 
       },
       text:{
         width:'60%',
+        marginTop:'15%',
         maxWidth:'600px',
 
       },
@@ -39,7 +40,7 @@ import Searchico from 'material-ui/svg-icons/action/search';
 
     }
     return (
-      <div style={styles.searcha} className="clearfix">
+      <div style={styles.searcha} >
        <Searchico style={styles.searchBtn}/>
          <TextField
            hintText="搜索"
